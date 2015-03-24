@@ -3,5 +3,8 @@
 <ul>
   <% @questions.each do |question| %>
     <li><%= question.title %></li>
+    <%= link_to 'Delete',
+                '/questions/' + question.to_param,
+                method: :delete %>
   <% end %>
 </ul>
