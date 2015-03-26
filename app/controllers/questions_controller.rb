@@ -8,11 +8,15 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answer = Answer.new
-    @answers = @question.answers
+    # @answers = @question.answers
   end
 
   def new
     @question = Question.new
+  end
+
+  def edit
+    @question = Question.find(params[:id])
   end
 
   def create
@@ -27,15 +31,9 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def edit
-    id = params[:id]
-    @question = Question.find(id)
-  end
-
   def update
-    id = params[:id]
-    @question = Question.find(id)
-    if @question.update!(question_params)
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
       flash[:notice] = 'Update saved!'
       redirect_to @question
     else
@@ -53,6 +51,7 @@ class QuestionsController < ApplicationController
   end
 
   private
+
   def question_params
     params.require(:question).permit(:title, :description)
   end

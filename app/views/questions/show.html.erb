@@ -4,13 +4,6 @@
   <dd class="active" id="delete"><%= link_to '_delete', '/questions/' + @question.to_param, method: :delete %></dd>
 </dl>
 
-<% if notice %>
-  <div class="notice"><%= notice %></div>
-<% end %>
-<% if alert %>
-  <div class="alert"><%= alert %></div>
-<% end %>
-
 <div class="title">
 <%= @question.title %>
 <p class="username"><%= '> ' %><%= @question.user.username %><%= ' | ' %><%= @question.created_at %></p></p>
@@ -24,7 +17,7 @@
   <legend>_answer(s)</legend>
 
   <div class="answers">
-    <% @answers.each do |answer| %>
+    <% @question.answers.each do |answer| %>
     <div class="answers panel">
       <p><%= '> ' %><%= answer.description %></p>
       <p class="username"><%= answer.user.username %><%= ' | ' %><%= answer.created_at %></p>

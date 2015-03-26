@@ -37,6 +37,13 @@
   </section>
   </nav>
 
+  <% if notice %>
+    <div class="notice"><%= notice %></div>
+  <% end %>
+  <% if alert %>
+    <div class="alert"><%= alert %></div>
+  <% end %>
+
   <%= yield %>
 
   </div>
