@@ -16,6 +16,7 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
 $(function() {
    $('.notice').delay(300).fadeIn('normal', function() {
       $(this).delay(2500).fadeOut();
@@ -33,7 +34,7 @@ $(function() {
       var confirm = window.confirm("Are you sure you want to delete this question?")
       if( confirm == true ){
           return true;
-      }else{
+      } else {
           return false;
       }
    });

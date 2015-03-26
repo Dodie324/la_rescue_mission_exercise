@@ -1,0 +1,18 @@
+<dl class="sub-nav">
+  <dd class="active"><%= link_to '_home', root_path %></dd>
+  <dd class="active"><%= link_to '_back', question_path(@answer.question_id) %></dd>
+</dl>
+
+<div class="title_header">
+  _update your answer
+</div>
+
+<fieldset>
+    <%= form_for @answer do |f| %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.submit "Save changes" %>
+    <% end %>
+</fieldset>

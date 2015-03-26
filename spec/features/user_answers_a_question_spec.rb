@@ -23,11 +23,20 @@ feature 'user answers a questions', %Q{
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Sign up"
-    save_and_open_page
-    click_link 'Edit an incorrect commit message in Git words words words'
-    # click_link question_path(7)
 
-    fill_in('_submit an answer', with:('The ' * 50))
+
+    click_link "_new question"
+    fill_in "Title", with: "Germanwings plane crash: Co-pilot wanted to destroy plane"
+    fill_in "Description", with: "We hear the pilot ask the co-pilot to take
+    control of the plane and we hear at the same time the sound of a seat moving
+    backwards and the sound of a door closing, Mr Robin told reporters.
+    He said the pilot, named in the German media as Patrick S, had probably gone to the toilet.
+    At that moment, the co-pilot is controlling the plane by himself. While he is alone,
+    the co-pilot presses the buttons of the flight monitoring system to put into action the descent of the aeroplane."
+
+    click_button "Add Question"
+
+    fill_in('_submit an answer', with: answer_description)
 
     click_button '_submit'
 

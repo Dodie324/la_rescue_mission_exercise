@@ -19,7 +19,9 @@
   <div class="answers">
     <% @question.answers.each do |answer| %>
     <div class="answers panel">
-      <p><%= '> ' %><%= answer.description %></p>
+      <p><%= link_to '_edit', edit_question_answer_path(@question, answer) %><%= ' | ' %>
+         <%= link_to '_delete', '/questions/' + answer.question_id.to_s + '/answers/' + answer.to_param, method: :delete %></p>
+      <%= markdown(answer.description) %>
       <p class="username"><%= answer.user.username %><%= ' | ' %><%= answer.created_at %></p>
     </div>
     <% end %>

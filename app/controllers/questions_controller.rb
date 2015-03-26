@@ -8,7 +8,10 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answer = Answer.new
-    # @answers = @question.answers
+    respond_to do |format|
+      format.html
+      format.json { render json: @question }
+    end
   end
 
   def new
