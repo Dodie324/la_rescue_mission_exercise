@@ -23,9 +23,9 @@ feature 'user answers a questions', %Q{
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Sign up"
-
-    click_link 'CSV as a data source for Crystal Reports - change in column names'
-    # click_link question_path(6)
+    save_and_open_page
+    click_link 'Edit an incorrect commit message in Git words words words'
+    # click_link question_path(7)
 
     fill_in('_submit an answer', with:('The ' * 50))
 

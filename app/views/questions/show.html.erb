@@ -1,7 +1,7 @@
 <dl class="sub-nav">
   <dd class="active"><%= link_to '_home', root_path %></dd>
   <dd class="active"><%= link_to '_edit', edit_question_path %></dd>
-  <dd class="active"><%= link_to '_delete', '/questions/' + @question.to_param, method: :delete %></dd>
+  <dd class="active" id="delete"><%= link_to '_delete', '/questions/' + @question.to_param, method: :delete %></dd>
 </dl>
 
 <% if notice %>

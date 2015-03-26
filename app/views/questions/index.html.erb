@@ -1,12 +1,17 @@
+<% if notice %>
+  <div class="notice"><%= notice %></div>
+<% end %>
+
 <div class="title_header">
-  _question(s)
+  _recent question(s)
 </div>
 
 <fieldset>
   <div class="questions">
-    <% @questions.each do |question| %>
+    <% @questions.order(created_at: :desc).each do |question| %>
     <div class="questions panel">
       <%= '> '%><%= link_to question.title, question_path(question) %>
+      <p class="username"><%= question.user.username %><%= ' | ' %><%= question.created_at %></p>
     </div>
     <% end %>
   </div>
