@@ -1,21 +1,21 @@
 == README
 
-This is my first Rails project!
-The objective of this assignment is to build a website like Stackoverflow for posting and answering questions.
+#This is my first Rails project!
+#The objective of this assignment is to build a website like Stackoverflow for posting and answering questions.
 
-Learning Objectives
+#Learning Objectives
 
--Build a basic Rails app
--Compare Rails to Sinatra
--Practice using Rails routes
--Practice using Rails form helpers
--Practice using Active Record associations
--User Stories
+#-Build a basic Rails app
+#-Compare Rails to Sinatra
+#-Practice using Rails routes
+#-Practice using Rails form helpers
+#-Practice using Active Record associations
+#-User Stories
 
-[x] Post a Question
-[x] View All Questions
-[x] View a Question's Details
-[x] Answering a Question
-[x] Viewing a Question's Answers
-[x] Editing a Question
-[x] Deleting a Question
+#[x] Post a Question
+#[x] View All Questions
+#[x] View a Question's Details
+#[x] Answering a Question
+#[x] Viewing a Question's Answers
+#[x] Editing a Question
+#[x] Deleting a Question
