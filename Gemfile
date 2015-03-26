@@ -42,5 +42,6 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'foundation-rails'
 end
 

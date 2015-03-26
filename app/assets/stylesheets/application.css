@@ -12,4 +12,78 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.navbar-text {
+  display: inline-block;
+}
+
+.title {
+  font-style: Arial;
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.header_title {
+  font-style: Arial;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.display_answers p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-style: Arial;
+  font-size: 0.8em;
+}
+
+.top-bar {
+  background-color: #D0C91F
+}
+
+.answers_header {
+  font-family: Arial;
+  font-size: 1.5em;
+  padding-bottom: 5px;
+}
+
+.sub-nav {
+  padding: 10px;
+  margin-left: -25px;
+}
+
+.questions a {
+  color: #000000 !important;
+}
+
+.name a {
+  font-size: 1.5em !important;
+  font-style: Arial !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+  padding-left: 20px !important;
+}
+
+.title_header {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.notice {
+  padding: 1.5em;
+  background-color: #F2F2F2;
+}
+
+.username {
+  font-size: 0.5em;
+}

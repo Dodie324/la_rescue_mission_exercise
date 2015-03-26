@@ -1,2 +1,44 @@
+<dl class="sub-nav">
+  <dd class="active"><%= link_to '_home', root_path %></dd>
+  <dd class="active"><%= link_to '_edit', edit_question_path %></dd>
+  <dd class="active"><%= link_to '_delete', '/questions/' + @question.to_param, method: :delete %></dd>
+</dl>
+
+<% if notice %>
+  <div class="notice"><%= notice %></div>
+<% end %>
+<% if alert %>
+  <div class="alert"><%= alert %></div>
+<% end %>
+
+<div class="title">
 <%= @question.title %>
-<%= @question.description %>
+<p class="username"><%= '> ' %><%= @question.user.username %><%= ' | ' %><%= @question.created_at %></p></p>
+</div>
+
+<div class="description panel">
+<p><%= @question.description %></p>
+</div>
+
+<fieldset>
+  <legend>_answer(s)</legend>
+
+  <div class="answers">
+    <% @answers.each do |answer| %>
+    <div class="answers panel">
+      <p><%= '> ' %><%= answer.description %></p>
+      <p class="username"><%= answer.user.username %><%= ' | ' %><%= answer.created_at %></p>
+    </div>
+    <% end %>
+  </div>
+
+  <fieldset>
+      <%= form_for [@question, @answer] do |f| %>
+
+      <%= f.label :description, "_submit an answer" %>
+      <%= f.text_area :description %></br>
+
+      <%= f.submit "_submit" %>
+    <% end %>
+  </fieldset>
+</fieldset>

@@ -1,11 +1,21 @@
-<h1>Update your Question</h1>
+<dl class="sub-nav">
+  <dd class="active"><%= link_to '_home', root_path %></dd>
+  <dd class="active"><%= link_to '_back', question_path(@question) %></dd>
+</dl>
 
-<%= form_for @question do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div class="title_header">
+  _update your question
+</div>
 
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+<fieldset>
+    <%= form_for @question do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
 
-  <%= f.submit "Save changes" %>
-<% end %>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.submit "Save changes" %>
+    <% end %>
+</fieldset>
+

@@ -6,8 +6,9 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    id = params[:id]
-    @question = Question.find(id)
+    @question = Question.find(params[:id])
+    @answer = Answer.new
+    @answers = @question.answers
   end
 
   def new
@@ -21,7 +22,7 @@ class QuestionsController < ApplicationController
       flash[:notice] = 'Question added!'
       redirect_to @question
     else
-      flash[:notice] = 'Question not added!'
+      flash[:alert] = 'Question not added!'
       render :new
     end
   end
@@ -32,11 +33,15 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    binding.pry
     id = params[:id]
     @question = Question.find(id)
-    @question.update!(question_params)
-    redirect_to @question
+    if @question.update!(question_params)
+      flash[:notice] = 'Update saved!'
+      redirect_to @question
+    else
+      flash[:alert] = 'Update not saved!'
+      redirect_to edit_question_path
+    end
   end
 
   def destroy

@@ -1,10 +1,18 @@
-<h1>Questions</h1>
+<div class="title_header">
+  _question(s)
+</div>
 
-<ul>
-  <% @questions.each do |question| %>
-    <li><%= question.title %></li>
-    <%= link_to 'Delete',
-                '/questions/' + question.to_param,
-                method: :delete %>
-  <% end %>
-</ul>
+<fieldset>
+  <div class="questions">
+    <% @questions.each do |question| %>
+    <div class="questions panel">
+      <%= '> '%><%= link_to question.title, question_path(question) %>
+    </div>
+    <% end %>
+  </div>
+</fieldset>
+
+<dl class="sub-nav">
+  <dd class="active"><%= link_to '_new question', new_question_path %></dd>
+</dl>
+

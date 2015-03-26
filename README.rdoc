@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first Rails project!
+The objective of this assignment is to build a website like Stackoverflow for posting and answering questions.
 
-Things you may want to cover:
+Learning Objectives
 
-* Ruby version
+-Build a basic Rails app
+-Compare Rails to Sinatra
+-Practice using Rails routes
+-Practice using Rails form helpers
+-Practice using Active Record associations
+-User Stories
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[x] Post a Question
+[x] View All Questions
+[x] View a Question's Details
+[x] Answering a Question
+[x] Viewing a Question's Answers
+[x] Editing a Question
+[x] Deleting a Question
